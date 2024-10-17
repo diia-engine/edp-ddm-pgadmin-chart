@@ -17,7 +17,7 @@ spec:
   {{- if .Values.ingress.site }}
   url: https://{{ .Values.ingress.site }}-{{ .Values.namespace }}.{{ .Values.dnsWildcard }}
   {{- else }}
-  url: https://pgadmin-{{ .Values.namespace }}.{{ .Values.dnsWildcard }}
+  url: https://{{ .Chart.Name }}-{{ .Values.namespace }}.{{ .Values.dnsWildcard }}
   {{- end }}
   visible: true
 {{- end }}
